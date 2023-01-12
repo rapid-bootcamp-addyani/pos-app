@@ -44,8 +44,22 @@
         <td>@Model.Discountinued</td>
     </tr>
     <tr>
-        <th>OrderDetail</th>
-        <td>@Model.OrderDetail</td>
+        <th>Orders</th>
+        <td>
+            @foreach (var data in Model.OrderDetails)
+            {
+                <h6>@data.Discount</h6>
+            }
+        </td>
+    </tr>
+    <tr>
+        <th>ID Orders</th>
+        <td>
+            @foreach (var data in Model.OrderDetails)
+            {
+                <h6>@data.Id</h6>
+            }
+        </td>
     </tr>
 </table>
 

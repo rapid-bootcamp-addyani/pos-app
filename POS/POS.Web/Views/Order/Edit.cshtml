@@ -1,0 +1,96 @@
+﻿@using POS.Repository;
+@model OrderEntity
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Edit Order</h2>
+<form asp-controller="Order" asp-action="Update" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label asp-for="CustomerId"></label>
+        <input asp-for="CustomerId" class="form-control" />
+        <span asp-validation-for="CustomerId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EmployeeId"></label>
+        <input asp-for="EmployeeId" class="form-control" />
+        <span asp-validation-for="EmployeeId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="OrderDate"></label>
+        <input asp-for="OrderDate" class="form-control" />
+        <span asp-validation-for="OrderDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RequiredDate"></label>
+        <input asp-for="RequiredDate" class="form-control" />
+        <span asp-validation-for="RequiredDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShippedDate"></label>
+        <input asp-for="ShippedDate" class="form-control" />
+        <span asp-validation-for="ShippedDate" class="text-danger"></span>
+    </div>
+
+
+
+
+
+    <div class="form-group">
+        <label asp-for="ShipVia"></label>
+        <input asp-for="ShipVia" class="form-control" />
+        <span asp-validation-for="ShipVia" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Freight"></label>
+        <input asp-for="Freight" class="form-control" />
+        <span asp-validation-for="Freight" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ShipName"></label>
+        <input asp-for="ShipName" class="form-control" />
+        <span asp-validation-for="ShipName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShipAddress"></label>
+        <input asp-for="ShipAddress" class="form-control" />
+        <span asp-validation-for="ShipAddress" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ShipCity"></label>
+        <input asp-for="ShipCity" class="form-control" />
+        <span asp-validation-for="ShipCity" class="text-danger"></span>
+    </div>
+
+
+
+
+    <div class="form-group">
+        <label asp-for="ShipRegion"></label>
+        <input asp-for="ShipRegion" class="form-control" />
+        <span asp-validation-for="ShipRegion" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ShipPostalCode"></label>
+        <input asp-for="ShipPostalCode" class="form-control" />
+        <span asp-validation-for="ShipPostalCode" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ShipCountry"></label>
+        <input asp-for="ShipCountry" class="form-control" />
+        <span asp-validation-for="ShipCountry" class="text-danger"></span>
+    </div>
+    <div class="form-footer">
+        <button type="submit" class="btn btn-warning">Update</button>
+    </div>
+</form>

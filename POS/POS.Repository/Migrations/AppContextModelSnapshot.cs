@@ -22,7 +22,7 @@ namespace POS.Repository.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("POS.Repository.Category", b =>
+            modelBuilder.Entity("POS.Repository.CategoryEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -46,7 +46,7 @@ namespace POS.Repository.Migrations
                     b.ToTable("categories");
                 });
 
-            modelBuilder.Entity("POS.Repository.Customer", b =>
+            modelBuilder.Entity("POS.Repository.CustomerEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -110,7 +110,7 @@ namespace POS.Repository.Migrations
                     b.ToTable("customers");
                 });
 
-            modelBuilder.Entity("POS.Repository.Employee", b =>
+            modelBuilder.Entity("POS.Repository.EmployeeEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -159,7 +159,6 @@ namespace POS.Repository.Migrations
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .ValueGeneratedOnUpdateSometimes()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("last_name");
 
@@ -189,16 +188,53 @@ namespace POS.Repository.Migrations
 
                     b.Property<string>("TitleOfCourtesy")
                         .IsRequired()
-                        .ValueGeneratedOnUpdateSometimes()
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("last_name");
+                        .HasColumnName("title_of_courtesy");
 
                     b.HasKey("Id");
 
                     b.ToTable("employees");
                 });
 
-            modelBuilder.Entity("POS.Repository.Order", b =>
+            modelBuilder.Entity("POS.Repository.OrderDetailEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Discount")
+                        .HasColumnType("int")
+                        .HasColumnName("discount");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int")
+                        .HasColumnName("order_id");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int")
+                        .HasColumnName("product_id");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int")
+                        .HasColumnName("quantity");
+
+                    b.Property<int>("UnitPrice")
+                        .HasColumnType("int")
+                        .HasColumnName("unit_price");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("order_details");
+                });
+
+            modelBuilder.Entity("POS.Repository.OrderEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -257,13 +293,13 @@ namespace POS.Repository.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("ship_region");
 
+                    b.Property<int>("ShipVia")
+                        .HasColumnType("int")
+                        .HasColumnName("ship_via");
+
                     b.Property<DateTime>("ShippedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("shipped_date");
-
-                    b.Property<int>("ship_viaShipVia")
-                        .HasColumnType("int")
-                        .HasColumnName("ship_via");
 
                     b.HasKey("Id");
 
@@ -274,47 +310,7 @@ namespace POS.Repository.Migrations
                     b.ToTable("orders");
                 });
 
-            modelBuilder.Entity("POS.Repository.OrderDetail", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("Discount")
-                        .HasColumnType("int")
-                        .HasColumnName("discount");
-
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int")
-                        .HasColumnName("order_id");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int")
-                        .HasColumnName("product_id");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int")
-                        .HasColumnName("quantity");
-
-                    b.Property<int>("UnitPrice")
-                        .HasColumnType("int")
-                        .HasColumnName("unit_price");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("OrderId")
-                        .IsUnique();
-
-                    b.HasIndex("ProductId")
-                        .IsUnique();
-
-                    b.ToTable("order_details");
-                });
-
-            modelBuilder.Entity("POS.Repository.Product", b =>
+            modelBuilder.Entity("POS.Repository.ProductEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -370,7 +366,7 @@ namespace POS.Repository.Migrations
                     b.ToTable("products");
                 });
 
-            modelBuilder.Entity("POS.Repository.Supplier", b =>
+            modelBuilder.Entity("POS.Repository.SupplierEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -439,15 +435,34 @@ namespace POS.Repository.Migrations
                     b.ToTable("suppliers");
                 });
 
-            modelBuilder.Entity("POS.Repository.Order", b =>
+            modelBuilder.Entity("POS.Repository.OrderDetailEntity", b =>
                 {
-                    b.HasOne("POS.Repository.Customer", "Customer")
+                    b.HasOne("POS.Repository.OrderEntity", "Order")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("POS.Repository.ProductEntity", "Product")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("POS.Repository.OrderEntity", b =>
+                {
+                    b.HasOne("POS.Repository.CustomerEntity", "Customer")
                         .WithMany("Orders")
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("POS.Repository.Employee", "Employee")
+                    b.HasOne("POS.Repository.EmployeeEntity", "Employee")
                         .WithMany("Orders")
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -458,34 +473,15 @@ namespace POS.Repository.Migrations
                     b.Navigation("Employee");
                 });
 
-            modelBuilder.Entity("POS.Repository.OrderDetail", b =>
+            modelBuilder.Entity("POS.Repository.ProductEntity", b =>
                 {
-                    b.HasOne("POS.Repository.Order", "order")
-                        .WithOne("orderDetail")
-                        .HasForeignKey("POS.Repository.OrderDetail", "OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("POS.Repository.Product", "product")
-                        .WithOne("OrderDetail")
-                        .HasForeignKey("POS.Repository.OrderDetail", "ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("order");
-
-                    b.Navigation("product");
-                });
-
-            modelBuilder.Entity("POS.Repository.Product", b =>
-                {
-                    b.HasOne("POS.Repository.Category", "Category")
+                    b.HasOne("POS.Repository.CategoryEntity", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("POS.Repository.Supplier", "Supplier")
+                    b.HasOne("POS.Repository.SupplierEntity", "Supplier")
                         .WithMany("Products")
                         .HasForeignKey("SupplierId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -496,34 +492,32 @@ namespace POS.Repository.Migrations
                     b.Navigation("Supplier");
                 });
 
-            modelBuilder.Entity("POS.Repository.Category", b =>
+            modelBuilder.Entity("POS.Repository.CategoryEntity", b =>
                 {
                     b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("POS.Repository.Customer", b =>
+            modelBuilder.Entity("POS.Repository.CustomerEntity", b =>
                 {
                     b.Navigation("Orders");
                 });
 
-            modelBuilder.Entity("POS.Repository.Employee", b =>
+            modelBuilder.Entity("POS.Repository.EmployeeEntity", b =>
                 {
                     b.Navigation("Orders");
                 });
 
-            modelBuilder.Entity("POS.Repository.Order", b =>
+            modelBuilder.Entity("POS.Repository.OrderEntity", b =>
                 {
-                    b.Navigation("orderDetail")
-                        .IsRequired();
+                    b.Navigation("OrderDetails");
                 });
 
-            modelBuilder.Entity("POS.Repository.Product", b =>
+            modelBuilder.Entity("POS.Repository.ProductEntity", b =>
                 {
-                    b.Navigation("OrderDetail")
-                        .IsRequired();
+                    b.Navigation("OrderDetails");
                 });
 
-            modelBuilder.Entity("POS.Repository.Supplier", b =>
+            modelBuilder.Entity("POS.Repository.SupplierEntity", b =>
                 {
                     b.Navigation("Products");
                 });

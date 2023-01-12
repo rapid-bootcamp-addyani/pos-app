@@ -63,24 +63,5 @@ namespace POS.Repository
         public String Homepage { get; set; }
 
         public ICollection<ProductEntity> Products { get; set; }
-
-        public SupplierEntity(POS.ViewModel.SupplierModel model)
-        {
-            CompanyName = model.CompanyName;
-            ContactName = model.ContactName;
-            ContactTitle = model.ContactTitle;
-            Address = model.Address;
-            City = model.City;
-            Region = model.Region;
-            PostalCode = model.PostalCode;
-            Country = model.Country;
-            Phone = model.Phone;
-            Fax = model.Fax;
-            Homepage = model.Homepage;
-        }
-
-        public SupplierEntity()
-        {
-        }
     }
 }

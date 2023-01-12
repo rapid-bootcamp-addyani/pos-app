@@ -1,0 +1,74 @@
+﻿@using POS.Repository;
+@model IEnumerable<EmployeeEntity>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Employee Get All</h2>
+<a class="btn btn-sm btn-primary" asp-area="" asp-controller="Employee" asp-action="Create">Create New Employee</a>
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>LastName</th>
+            <th>FirstName</th>
+            <th>Title</th>
+            <th>TitleOfCourtesy</th>
+
+            <th>BirthDate</th>
+            <th>HireDate</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Region</th>
+
+            <th>PostalCode</th>
+            <th>Country</th>
+            <th>HomePhone</th>
+            <th>Extension</th>
+            <th>Notes</th>
+            <th>ReportTo</th>
+
+            <th>Orders</th>
+
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.LastName</td>
+                <td>@item.FirstName</td>
+                <td>@item.Title</td>
+                <td>@item.TitleOfCourtesy</td>
+
+                <td>@item.BirthDate</td>
+                <td>@item.HireDate</td>
+                <td>@item.Address</td>
+                <td>@item.City</td>
+                <td>@item.Region</td>
+
+                <td>@item.PostalCode</td>
+                <td>@item.Country</td>
+                <td>@item.HomePhone</td>
+                <td>@item.Extension</td>
+                <td>@item.Notes</td>
+                <td>@item.ReportTo</td>
+                <td>
+                    @foreach (var data in item.Orders)
+                    {
+                        <h6>@data.ShipName</h6>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-success">View</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

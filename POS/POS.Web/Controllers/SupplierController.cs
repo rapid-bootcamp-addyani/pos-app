@@ -15,18 +15,18 @@ namespace POS.Web.Controllers
         {
             _service = new SupplierService(context);
         }
-        
+
         [HttpGet]
         public ActionResult List()
         {
-            var Data = _service.GetSupplierWithProduct();
+            var Data = _service.GetIncludeProducts();
             return View(Data);
         }
 
         [HttpGet]
         public IActionResult Details(int id)
         {
-            var Data = _service.GetSupplierByIdWithProduct(id);
+            var Data = _service.GetByIdIncludeProducts(id);
             return View(Data);
         }
 
@@ -39,20 +39,14 @@ namespace POS.Web.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var Data = _service.GetSupplierById(id);
+            var Data = _service.GetById(id);
             return View(Data);
         }
 
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var Data = _service.GetSupplierById(id);
-            if (Data == null)
-            {
-                return Redirect("/");
-            }
-
-            _service.DeleteSupplier(Data);
+            _service.Delete(id);
             return Redirect("/Supplier/List");
         }
 
@@ -62,7 +56,7 @@ namespace POS.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                _service.Create(new SupplierEntity(request));
+                _service.Create(request);
                 return Redirect("/Supplier/List");
             }
             return View(request);
@@ -73,9 +67,7 @@ namespace POS.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                SupplierEntity supplier = new SupplierEntity(request);
-                supplier.Id = request.Id;
-                _service.Update(supplier);
+                _service.Update(request);
                 return Redirect("/Supplier/List");
             }
             return View("Edit", request);

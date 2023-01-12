@@ -1,0 +1,37 @@
+﻿@using POS.Repository;
+@model OrderDetailEntity
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Detail OrderDetail</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>OrderId</th>
+        <td>@Model.OrderId</td>
+    </tr>
+    <tr>
+        <th>ProductId</th>
+        <td>@Model.ProductId</td>
+    </tr>
+
+    <tr>
+        <th>UnitPrice</th>
+        <td>@Model.UnitPrice</td>
+    </tr>
+    <tr>
+        <th>Quantity</th>
+        <td>@Model.Quantity</td>
+    </tr>
+    <tr>
+        <th>Discount</th>
+        <td>@Model.Discount</td>
+    </tr>
+</table>
+
+<a class="btn btn-sm btn-primary" asp-area="" asp-controller="OrderDetail" asp-action="List">Back</a>

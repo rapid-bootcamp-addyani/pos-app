@@ -32,12 +32,76 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Customer/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Customer/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Customer/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Customer/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Employee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Employee/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Employee/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Employee/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/OrderDetail/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/OrderDetail/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/OrderDetail/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/OrderDetail/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Order/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Order/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Order/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Order/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Product/Create.cshtml]

@@ -19,14 +19,14 @@ namespace POS.Web.Controllers
         [HttpGet]
         public ActionResult List()
         {
-            var Data = _service.GetCategoryWithProduct();
+            var Data = _service.GetIncludeProducts();
             return View(Data);
         }
 
         [HttpGet]
         public IActionResult Details(int id)
         {
-            var Data = _service.GetCategoryByIdWithProduct(id);
+            var Data = _service.GetByIdIncludeProducts(id);
             return View(Data);
         }
 
@@ -39,20 +39,14 @@ namespace POS.Web.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var Data = _service.GetCategoryByIdWithProduct(id);
+            var Data = _service.GetById(id);
             return View(Data);
         }
 
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var Data = _service.GetCategoryById(id);
-            if (Data == null)
-            {
-                return Redirect("/");
-            }
-
-            _service.DeleteCategory(Data);
+            _service.Delete(id);
             return Redirect("/Category/List");
         }
 
@@ -62,7 +56,7 @@ namespace POS.Web.Controllers
         {
             if(ModelState.IsValid)
             {
-                _service.Create(new CategoryEntity(request));
+                _service.Create(request);
                 return Redirect("/Category/List");
             }
             return View(request);
@@ -73,9 +67,7 @@ namespace POS.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                CategoryEntity category = new CategoryEntity(request);
-                category.Id= request.Id;
-                _service.Update(category);
+                _service.Update(request);
                 return Redirect("/Category/List");
             }
             return View("Edit", request);

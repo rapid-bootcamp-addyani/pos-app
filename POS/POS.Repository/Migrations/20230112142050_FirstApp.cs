@@ -54,6 +54,7 @@ namespace POS.Repository.Migrations
                     last_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     first_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    title_of_courtesy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     birth_date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     hire_date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     address = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -196,14 +197,12 @@ namespace POS.Repository.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_order_details_order_id",
                 table: "order_details",
-                column: "order_id",
-                unique: true);
+                column: "order_id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_order_details_product_id",
                 table: "order_details",
-                column: "product_id",
-                unique: true);
+                column: "product_id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_orders_costumer_id",

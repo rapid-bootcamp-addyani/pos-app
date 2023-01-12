@@ -1,0 +1,81 @@
+﻿@using POS.Repository;
+@model CustomerEntity
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Detail Customer</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>CompanyName</th>
+        <td>@Model.CompanyName</td>
+    </tr>
+    <tr>
+        <th>ContactName</th>
+        <td>@Model.ContactName</td>
+    </tr>
+
+
+    <tr>
+        <th>ContactTitle</th>
+        <td>@Model.ContactTitle</td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td>@Model.Address</td>
+    </tr>
+    <tr>
+        <th>City</th>
+        <td>@Model.City</td>
+    </tr>
+
+
+    <tr>
+        <th>Region</th>
+        <td>@Model.Region</td>
+    </tr>
+    <tr>
+        <th>PostalCode</th>
+        <td>@Model.PostalCode</td>
+    </tr>
+        <tr>
+        <th>Country</th>
+        <td>@Model.Country</td>
+    </tr>
+
+
+    <tr>
+        <th>Phone</th>
+        <td>@Model.Phone</td>
+    </tr>
+    <tr>
+        <th>Fax</th>
+        <td>@Model.Fax</td>
+    </tr>
+
+    <tr>
+        <th>Orders</th>
+        <td>
+            @foreach (var data in Model.Orders)
+            {
+                <h6>@data.ShipName</h6>
+            }
+        </td>
+    </tr>
+    <tr>
+        <th>ID Orders</th>
+        <td>
+            @foreach (var data in Model.Orders)
+            {
+                <h6>@data.Id</h6>
+            }
+        </td>
+    </tr>
+</table>
+
+<a class="btn btn-sm btn-primary" asp-area="" asp-controller="Customer" asp-action="List">Back</a>

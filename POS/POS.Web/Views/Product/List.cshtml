@@ -43,7 +43,12 @@
 
                 <td>@item.RecorderLevel</td>
                 <td>@item.Discountinued</td>
-                <td>@item.OrderDetail</td>
+                <td>
+                    @foreach (var data in item.OrderDetails)
+                    {
+                        <h6>@data.Discount</h6>
+                    }
+                </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
                     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-success">View</a>

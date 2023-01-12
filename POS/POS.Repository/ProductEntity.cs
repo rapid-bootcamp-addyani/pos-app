@@ -56,24 +56,6 @@ namespace POS.Repository
         [Column("discountinued")]
         public Boolean Discountinued { get; set; }
 
-        public ICollection<OrderDetailEntity> OrderDetail { get; set; }
-
-        public ProductEntity(POS.ViewModel.ProductModel model)
-        {
-            ProductName = model.ProductName;
-            SupplierId = model.SupplierId;
-            CategoryId = model.CategoryId;
-            QuantityPerUnit = model.QuantityPerUnit;
-            UnitPrice = model.UnitPrice;
-            UnitsInStock = model.UnitsInStock;
-            UnitsOnOrder = model.UnitsOnOrder;
-            RecorderLevel = model.RecorderLevel;
-            Discountinued = model.Discountinued;
-        }
-
-        public ProductEntity()
-        {
-        }
-
+        public ICollection<OrderDetailEntity> OrderDetails { get; set; }
     }
 }

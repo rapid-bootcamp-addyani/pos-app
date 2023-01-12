@@ -1,0 +1,93 @@
+﻿@using POS.Repository;
+@model OrderEntity
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Detail Order</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>CustomerId</th>
+        <td>@Model.CustomerId</td>
+    </tr>
+    <tr>
+        <th>EmployeeId</th>
+        <td>@Model.EmployeeId</td>
+    </tr>
+
+
+    <tr>
+        <th>OrderDate</th>
+        <td>@Model.OrderDate</td>
+    </tr>
+    <tr>
+        <th>RequiredDate</th>
+        <td>@Model.RequiredDate</td>
+    </tr>
+    <tr>
+        <th>ShippedDate</th>
+        <td>@Model.ShippedDate</td>
+    </tr>
+
+
+    <tr>
+        <th>ShipVia</th>
+        <td>@Model.ShipVia</td>
+    </tr>
+    <tr>
+        <th>Freight</th>
+        <td>@Model.Freight</td>
+    </tr>
+        <tr>
+        <th>ShipName</th>
+        <td>@Model.ShipName</td>
+    </tr>
+
+
+    <tr>
+        <th>ShipAddress</th>
+        <td>@Model.ShipAddress</td>
+    </tr>
+    <tr>
+        <th>ShipCity</th>
+        <td>@Model.ShipCity</td>
+    </tr>
+        <tr>
+        <th>ShipRegion</th>
+        <td>@Model.ShipRegion</td>
+    </tr>
+        <tr>
+        <th>ShipPostalCode</th>
+        <td>@Model.ShipPostalCode</td>
+    </tr>
+        <tr>
+        <th>ShipCountry</th>
+        <td>@Model.ShipCountry</td>
+    </tr>
+
+    <tr>
+        <th>Orders</th>
+        <td>
+            @foreach (var data in Model.OrderDetails)
+            {
+                <h6>@data.Discount</h6>
+            }
+        </td>
+    </tr>
+    <tr>
+        <th>ID Orders</th>
+        <td>
+            @foreach (var data in Model.OrderDetails)
+            {
+                <h6>@data.Id</h6>
+            }
+        </td>
+    </tr>
+</table>
+
+<a class="btn btn-sm btn-primary" asp-area="" asp-controller="Order" asp-action="List">Back</a>
