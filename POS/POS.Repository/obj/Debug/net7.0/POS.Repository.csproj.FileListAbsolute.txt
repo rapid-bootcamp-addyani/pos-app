@@ -1,0 +1,14 @@
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Repository\bin\Debug\net7.0\POS.Repository.deps.json
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Repository\bin\Debug\net7.0\POS.Repository.runtimeconfig.json
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Repository\bin\Debug\net7.0\POS.Repository.dll
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Repository\bin\Debug\net7.0\POS.Repository.pdb
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Repository\obj\Debug\net7.0\POS.Repository.csproj.AssemblyReference.cache
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Repository\obj\Debug\net7.0\POS.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Repository\obj\Debug\net7.0\POS.Repository.AssemblyInfoInputs.cache
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Repository\obj\Debug\net7.0\POS.Repository.AssemblyInfo.cs
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Repository\obj\Debug\net7.0\POS.Repository.csproj.CoreCompileInputs.cache
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Repository\obj\Debug\net7.0\POS.Repository.dll
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Repository\obj\Debug\net7.0\refint\POS.Repository.dll
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Repository\obj\Debug\net7.0\POS.Repository.pdb
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Repository\obj\Debug\net7.0\POS.Repository.genruntimeconfig.cache
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Repository\obj\Debug\net7.0\ref\POS.Repository.dll

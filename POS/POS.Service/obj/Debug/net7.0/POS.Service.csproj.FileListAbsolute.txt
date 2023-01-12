@@ -1,0 +1,17 @@
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Service.deps.json
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Service.runtimeconfig.json
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Service.dll
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Service.pdb
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.csproj.AssemblyReference.cache
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.AssemblyInfoInputs.cache
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.AssemblyInfo.cs
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.csproj.CoreCompileInputs.cache
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.dll
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\obj\Debug\net7.0\refint\POS.Service.dll
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.pdb
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.genruntimeconfig.cache
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\obj\Debug\net7.0\ref\POS.Service.dll
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Repository.dll
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Repository.pdb
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.csproj.CopyComplete
