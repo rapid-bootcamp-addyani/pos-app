@@ -17,36 +17,29 @@ namespace POS.Service
             _context = context;
         }
 
-        public List<Category> GetCategories() => _context.CategoryEntities.ToList();
+        public List<CategoryEntity> GetCategories() => _context.CategoryEntities.ToList();
 
-        public Category GetCategoryById(int id) => _context.CategoryEntities.Find(id);
+        public CategoryEntity GetCategoryById(int id) => _context.CategoryEntities.Find(id);
 
-        public Boolean DeleteCategory(Category data)
+        public Boolean DeleteCategory(CategoryEntity data)
         {
             _context.CategoryEntities.Remove(data);
-            return true;
-        }
-
-        public Boolean SaveChanges()
-        {
             _context.SaveChanges();
             return true;
         }
 
-        public Boolean Create(Category data)
+        public Boolean Create(CategoryEntity data)
         {
             _context.CategoryEntities.Add(data);
+            _context.SaveChanges();
             return true;
         }
 
-        public Boolean Update(Category data)
+        public Boolean Update(CategoryEntity data)
         {
             _context.CategoryEntities.Update(data);
+            _context.SaveChanges();
             return true;
         }
-
-
-
-
     }
 }

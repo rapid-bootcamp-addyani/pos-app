@@ -821,6 +821,7 @@
           "Microsoft.EntityFrameworkCore": "6.0.13",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.13",
+          "POS.ViewModel": "1.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "6.0.2"
         },
         "compile": {
@@ -845,6 +846,16 @@
         },
         "runtime": {
           "bin/placeholder/POS.Service.dll": {}
+        }
+      },
+      "POS.ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/POS.ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/POS.ViewModel.dll": {}
         }
       }
     }
@@ -2120,6 +2131,11 @@
       "type": "project",
       "path": "../POS.Service/POS.Service.csproj",
       "msbuildProject": "../POS.Service/POS.Service.csproj"
+    },
+    "POS.ViewModel/1.0.0": {
+      "type": "project",
+      "path": "../POS.ViewModel/POS.ViewModel.csproj",
+      "msbuildProject": "../POS.ViewModel/POS.ViewModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2130,6 +2146,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.13",
       "POS.Repository >= 1.0.0",
       "POS.Service >= 1.0.0",
+      "POS.ViewModel >= 1.0.0",
       "Pomelo.EntityFrameworkCore.MySql >= 6.0.2"
     ]
   },
@@ -2170,6 +2187,9 @@
             },
             "D:\\data\\coding\\bootcamp\\rapid\\dotnet\\pos-app\\POS\\POS.Service\\POS.Service.csproj": {
               "projectPath": "D:\\data\\coding\\bootcamp\\rapid\\dotnet\\pos-app\\POS\\POS.Service\\POS.Service.csproj"
+            },
+            "D:\\data\\coding\\bootcamp\\rapid\\dotnet\\pos-app\\POS\\POS.ViewModel\\POS.ViewModel.csproj": {
+              "projectPath": "D:\\data\\coding\\bootcamp\\rapid\\dotnet\\pos-app\\POS\\POS.ViewModel\\POS.ViewModel.csproj"
             }
           }
         }

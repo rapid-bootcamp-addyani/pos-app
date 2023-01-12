@@ -1,0 +1,12 @@
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.ViewModel\bin\Debug\net7.0\POS.ViewModel.deps.json
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.ViewModel\bin\Debug\net7.0\POS.ViewModel.dll
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.ViewModel\bin\Debug\net7.0\POS.ViewModel.pdb
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.ViewModel\obj\Debug\net7.0\POS.ViewModel.csproj.AssemblyReference.cache
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.ViewModel\obj\Debug\net7.0\POS.ViewModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.ViewModel\obj\Debug\net7.0\POS.ViewModel.AssemblyInfoInputs.cache
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.ViewModel\obj\Debug\net7.0\POS.ViewModel.AssemblyInfo.cs
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.ViewModel\obj\Debug\net7.0\POS.ViewModel.csproj.CoreCompileInputs.cache
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.ViewModel\obj\Debug\net7.0\POS.ViewModel.dll
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.ViewModel\obj\Debug\net7.0\refint\POS.ViewModel.dll
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.ViewModel\obj\Debug\net7.0\POS.ViewModel.pdb
+D:\data\coding\bootcamp\rapid\dotnet\pos-app\POS\POS.ViewModel\obj\Debug\net7.0\ref\POS.ViewModel.dll

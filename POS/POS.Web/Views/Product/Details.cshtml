@@ -1,0 +1,52 @@
+﻿@using POS.Repository;
+@model ProductEntity
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Detail Product</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ProductName</th>
+        <td>@Model.ProductName</td>
+    </tr>
+    <tr>
+        <th>ProductId</th>
+        <td>@Model.SupplierId</td>
+    </tr>
+    <tr>
+        <th>CategoryId</th>
+        <td>@Model.CategoryId</td>
+    </tr>
+        <tr>
+        <th>QuantityPerUnit</th>
+        <td>@Model.QuantityPerUnit</td>
+    </tr>
+    <tr>
+        <th>UnitPrice</th>
+        <td>@Model.UnitPrice</td>
+    </tr>
+    <tr>
+        <th>UnitsInStock</th>
+        <td>@Model.UnitsInStock</td>
+    </tr>
+    <tr>
+        <th>UnitsOnOrder</th>
+        <td>@Model.UnitsOnOrder</td>
+    </tr>
+    <tr>
+        <th>RecorderLevel</th>
+        <td>@Model.RecorderLevel</td>
+    </tr>
+        <tr>
+        <th>Discountinued</th>
+        <td>@Model.Discountinued</td>
+    </tr>
+    <tr>
+        <th>OrderDetail</th>
+        <td>@Model.OrderDetail</td>
+    </tr>
+</table>
+
+<a class="btn btn-sm btn-primary" asp-area="" asp-controller="Product" asp-action="List">Back</a>

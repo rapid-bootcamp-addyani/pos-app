@@ -3,6 +3,7 @@ using POS.Service;
 using POS.Repository;
 using AppContext = POS.Repository.AppContext;
 using Microsoft.EntityFrameworkCore;
+using POS.ViewModel;
 
 namespace POS.Web.Controllers
 {
@@ -36,7 +37,7 @@ namespace POS.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult Update(int id)
+        public IActionResult Edit(int id)
         {
             var Data = _service.GetCategoryById(id);
             return View(Data);
@@ -52,26 +53,32 @@ namespace POS.Web.Controllers
             }
 
             _service.DeleteCategory(Data);
-            _service.SaveChanges();
             return Redirect("/Category/List");
         }
 
         [HttpPost]
-        public IActionResult Create([Bind("CategoryName, Description")] Category request)
+        [ValidateAntiForgeryToken]
+        public IActionResult Create([Bind("CategoryName, Description")] CategoryModel request)
         {
-            _service.Create(request);
-            _service.SaveChanges();
-
-            return Redirect("/Category/List");
+            if(ModelState.IsValid)
+            {
+                _service.Create(new CategoryEntity(request));
+                return Redirect("/Category/List");
+            }
+            return View(request);
         }
 
         [HttpPost]
-        public IActionResult Update([Bind("Id, CategoryName, Description")] Category request)
+        public IActionResult Update([Bind("Id, CategoryName, Description")] CategoryModel request)
         {
-            _service.Update(request);
-            _service.SaveChanges();
-
-            return Redirect("/Category/List");
+            if (ModelState.IsValid)
+            {
+                CategoryEntity category = new CategoryEntity(request);
+                category.Id= request.Id;
+                _service.Update(category);
+                return Redirect("/Category/List");
+            }
+            return View("Edit", request);
         }
     }
 }

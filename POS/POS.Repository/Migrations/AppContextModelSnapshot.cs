@@ -467,7 +467,7 @@ namespace POS.Repository.Migrations
                         .IsRequired();
 
                     b.HasOne("POS.Repository.Product", "product")
-                        .WithOne("orderDetail")
+                        .WithOne("OrderDetail")
                         .HasForeignKey("POS.Repository.OrderDetail", "ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -479,21 +479,21 @@ namespace POS.Repository.Migrations
 
             modelBuilder.Entity("POS.Repository.Product", b =>
                 {
-                    b.HasOne("POS.Repository.Category", "category")
+                    b.HasOne("POS.Repository.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("POS.Repository.Supplier", "supplier")
+                    b.HasOne("POS.Repository.Supplier", "Supplier")
                         .WithMany("Products")
                         .HasForeignKey("SupplierId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("category");
+                    b.Navigation("Category");
 
-                    b.Navigation("supplier");
+                    b.Navigation("Supplier");
                 });
 
             modelBuilder.Entity("POS.Repository.Category", b =>
@@ -519,7 +519,7 @@ namespace POS.Repository.Migrations
 
             modelBuilder.Entity("POS.Repository.Product", b =>
                 {
-                    b.Navigation("orderDetail")
+                    b.Navigation("OrderDetail")
                         .IsRequired();
                 });
 
