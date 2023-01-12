@@ -47,13 +47,27 @@
         <th>Fax</th>
         <td>@Model.Fax</td>
     </tr>
-        <tr>
+    <tr>
         <th>Homepage</th>
         <td>@Model.Homepage</td>
     </tr>
     <tr>
-        <th>Products</th>
-        <td>@Model.Products</td>
+        <th>Product</th>
+        <td>
+            @foreach (var data in Model.Products)
+            {
+                <h6>@data.ProductName</h6>
+            }
+        </td>
+    </tr>
+    <tr>
+        <th>ID Product</th>
+        <td>
+            @foreach (var data in Model.Products)
+            {
+                <h6>@data.Id</h6>
+            }
+        </td>
     </tr>
 </table>
 

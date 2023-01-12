@@ -20,14 +20,11 @@ namespace POS.Service
 
         public List<SupplierEntity> GetCategories() => _context.SupplierEntities.ToList();
 
+        public List<SupplierEntity> GetSupplierWithProduct() => _context.SupplierEntities.Include(s => s.Products).ToList();
+
         public SupplierEntity GetSupplierById(int id) => _context.SupplierEntities.Find(id);
 
-        public List<SupplierEntity> GetSupplierWithProduct()
-        {
-            return _context.SupplierEntities.Include(s => s.Products).ToList();
-        }
-        
-        //public List<SupplierEntity> GetSupplierWithProduct() => _context.SupplierEntities.Include(o => o.Products.Where(od => od.SupplierId == o.Id)).ToList();
+        public SupplierEntity GetSupplierByIdWithProduct(int id) => _context.SupplierEntities.Include(s => s.Products).FirstOrDefault(s => s.Id == id);
 
         public Boolean DeleteSupplier(SupplierEntity data)
         {

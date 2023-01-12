@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using POS.Repository;
 using AppContext = POS.Repository.AppContext;
 
@@ -19,7 +20,11 @@ namespace POS.Service
 
         public List<CategoryEntity> GetCategories() => _context.CategoryEntities.ToList();
 
+        public List<CategoryEntity> GetCategoryWithProduct() => _context.CategoryEntities.Include(s => s.Products).ToList();
+
         public CategoryEntity GetCategoryById(int id) => _context.CategoryEntities.Find(id);
+
+        public CategoryEntity GetCategoryByIdWithProduct(int id) => _context.CategoryEntities.Include(s => s.Products).FirstOrDefault(s => s.Id == id);
 
         public Boolean DeleteCategory(CategoryEntity data)
         {

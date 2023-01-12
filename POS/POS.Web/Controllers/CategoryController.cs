@@ -19,14 +19,14 @@ namespace POS.Web.Controllers
         [HttpGet]
         public ActionResult List()
         {
-            var Data = _service.GetCategories();
+            var Data = _service.GetCategoryWithProduct();
             return View(Data);
         }
 
         [HttpGet]
         public IActionResult Details(int id)
         {
-            var Data = _service.GetCategoryById(id);
+            var Data = _service.GetCategoryByIdWithProduct(id);
             return View(Data);
         }
 
@@ -39,7 +39,7 @@ namespace POS.Web.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var Data = _service.GetCategoryById(id);
+            var Data = _service.GetCategoryByIdWithProduct(id);
             return View(Data);
         }
 

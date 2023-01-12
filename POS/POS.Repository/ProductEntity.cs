@@ -56,7 +56,7 @@ namespace POS.Repository
         [Column("discountinued")]
         public Boolean Discountinued { get; set; }
 
-        public OrderDetailEntity OrderDetail { get; set; }
+        public ICollection<OrderDetailEntity> OrderDetail { get; set; }
 
         public ProductEntity(POS.ViewModel.ProductModel model)
         {

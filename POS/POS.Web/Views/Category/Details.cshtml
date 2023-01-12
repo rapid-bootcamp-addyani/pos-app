@@ -19,6 +19,24 @@
         <th>Description</th>
         <td>@Model.Description</td>
     </tr>
+    <tr>
+        <th>Product</th>
+        <td>
+            @foreach (var data in Model.Products)
+            {
+                <h6>@data.ProductName</h6>
+            }
+        </td>
+    </tr>
+    <tr>
+        <th>ID Product</th>
+        <td>
+            @foreach (var data in Model.Products)
+            {
+                <h6>@data.Id</h6>
+            }
+        </td>
+    </tr>
 </table>
 
 <a class="btn btn-sm btn-primary" asp-area="" asp-controller="Category" asp-action="List">Back</a>

@@ -26,7 +26,7 @@ namespace POS.Web.Controllers
         [HttpGet]
         public IActionResult Details(int id)
         {
-            var Data = _service.GetSupplierById(id);
+            var Data = _service.GetSupplierByIdWithProduct(id);
             return View(Data);
         }
 

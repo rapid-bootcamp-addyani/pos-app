@@ -56,6 +56,6 @@ namespace POS.Repository
         [Column("ship_country")]
         public String ShipCountry { get; set; }
 
-        public OrderDetailEntity orderDetail { get; set; }
+        public ICollection<OrderDetailEntity> OrderDetail { get; set; }
     }
 }

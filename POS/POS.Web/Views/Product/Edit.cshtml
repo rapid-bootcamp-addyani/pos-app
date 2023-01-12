@@ -22,18 +22,8 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="Supplier"></label>
-        <input asp-for="Supplier" class="form-control" />
-    </div>
-
-    <div class="form-group">
         <label asp-for="CategoryId"></label>
         <input asp-for="CategoryId" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Category"></label>
-        <input asp-for="Category" class="form-control" />
     </div>
 
     <div class="form-group">
@@ -64,15 +54,10 @@
     <div class="form-group">
         <label asp-for="Discountinued">Discountinued</label>
         <select class="form-select" aria-label="Set Discountinued" id="Discountinued" name="Discountinued">
-            <option selected>Select Discountinued Here</option>
             <option value="false">False</option>
             <option value="true">True</option>
-        </select>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="OrderDetail"></label>
-        <input asp-for="OrderDetail" class="form-control" />
+            <span asp-validation-for="Discountinued" class="text-danger"></span>
+        </select>   
     </div>
 
     <div class="form-footer">

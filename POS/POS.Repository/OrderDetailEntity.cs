@@ -11,9 +11,11 @@ namespace POS.Repository
     [Table("order_details")]
     public class OrderDetailEntity
     {
+        /*
         [Key]
         [Column("id")]
         public int Id { get; set; }   
+        */
 
         [Column("order_id")]
         public int OrderId { get; set; }
