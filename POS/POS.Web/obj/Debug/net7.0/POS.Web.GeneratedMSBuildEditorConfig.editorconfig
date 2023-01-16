@@ -32,6 +32,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Category/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcX0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Category/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcX0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Customer/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Customer/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcX0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Employee/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,6 +74,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Employee/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Employee/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcX0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Home/Index.cshtml]
@@ -88,6 +104,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/OrderDetail/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxcX0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Order/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -104,6 +124,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Order/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcX0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -118,6 +142,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Product/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Product/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxfQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Shared/Error.cshtml]
@@ -142,6 +170,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Supplier/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/Supplier/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcX0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/data/coding/bootcamp/rapid/dotnet/pos-app/POS/POS.Web/Views/_ViewImports.cshtml]

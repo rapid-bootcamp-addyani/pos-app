@@ -36,6 +36,12 @@ namespace POS.Web.Controllers
         }
 
         [HttpGet]
+        public IActionResult CreateModal()
+        {
+            return PartialView("_Create");
+        }
+
+        [HttpGet]
         public IActionResult Edit(int id)
         {
             var Data = _service.GetById(id);
